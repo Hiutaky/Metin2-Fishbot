@@ -1,0 +1,16 @@
+{
+  "name": "fishbot",
+  "module": "index.ts",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "node-gyp": "^11.0.0",
+    "robotjs": "^0.6.0",
+    "ts-node": "^10.9.2"
+  }
+}
