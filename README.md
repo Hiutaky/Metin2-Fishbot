@@ -1,26 +1,27 @@
 # Metin2 - Fish Bot
 
 To install dependencies:
-
 ```bash
 npm install
 ```
-How to use:
+## Usage
 
-- Setup Metin in window mode
-- Setup 1920 x 1080 resolution
-- Place che window in the top-left edge
-- Run the script
+1. Set up Metin in window mode.
+2. Set the resolution to 1920 x 1080.
+3. Position the window in the top-left corner of the screen.
+4. Run the script.
 
-Info:
-this script works by checking pixels in specific positions, it's configurated to work on ZorinOS with Wine, this mean that the settings are probably not the same on Windows. Probably you've to customize the following variables:
+## Information
 
-- fishingBox: position of the fishing box, the fishing box have a 1px black (#000000) border, this is needed to know if the user is currently fishing or not
-- fishingArea: define fishing area ( fishingArea + boxSize ), we use a square since the fish become hittable only when is into the circle and its border become "red"
-- circlePos: it's the cicle that change color when the fish is in, when RED the bot will try to hit the fish, otherwise just wait
+This script operates by checking pixels at specific positions. It is configured to work on ZorinOS with Wine, which means the settings might differ on Windows. You may need to customize the following variables:
 
+- **fishingBox**: The position of the fishing box. The fishing box has a 1px black (#000000) border, which is necessary to determine if the user is currently fishing.
+- **fishingArea**: Defines the fishing area (fishingArea + boxSize). We use a square because the fish becomes hittable only when it is inside the circle and its border turns "red".
+- **circlePos**: This is the circle that changes color when the fish is inside. When it turns RED, the bot will attempt to catch the fish; otherwise, it will wait.
 
-To run:
+## Running the Script
+
+To run the script, use the following command:
 
 ```bash
 node index.js
