@@ -24,11 +24,20 @@ let runs = 0;
 robotjs.moveMouse(50, 50)
 robotjs.mouseClick()
 
+let alternate = 0
+
 let locked = false;
 while(true) {
     if( ! locked ) {
+        locked= true;
         const now = performance.now();
-        robotjs.keyTap("1")
+        const key = alternate === 0 ? "1" : alternate === 1 ? "2" : "3"
+        if( alternate === 2 ) 
+            alternate = 0
+        else
+            ++alternate
+        robotjs.keyTap(key)
+        await sleep(200)
         robotjs.keyTap(" ")
         await sleep(200)
         const isBoxOpen = robotjs.getPixelColor(fishingBox.x, fishingBox.y) === boxCol
@@ -56,7 +65,9 @@ while(true) {
             runs++
             await sleep(1600)
             console.log("Exiting Fishing", `Time: ${((performance.now() - now ) / 1000 ).toFixed(2)}`, "Runs", runs, "\n")
+           
         } else await sleep(1200)
+        locked = false;
     }
 }
 

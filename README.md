@@ -9,6 +9,8 @@ npm install
 1. Set up Metin in window mode.
 2. Set the resolution to 1920 x 1080.
 3. Position the window in the top-left corner of the screen.
+4. Equip the fishing rod
+5. Place baits on the buttons: 1, 2, 3 equally divided ex: 200, 200, 200
 4. Run the script.
 
 ## Information
